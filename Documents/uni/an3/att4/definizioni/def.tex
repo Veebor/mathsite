@@ -1,0 +1,35 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+
+\section*{Pagina 1 - Definizioni}
+Dato lo spazio di misura \(\left(X, \mathcal{M}, \mu \right) \), una funzione \(f : X \rightarrow \mathbb{R}\) e una successione di funzioni \(f_{n} : X \rightarrow \mathbb{R} \) si possono definire 5 modi di convergenza differenti:
+
+\begin{itemize}
+ \item si dice che \(f_{n}\) converge \textbf{puntualmente} a \(f\) su \(X \iff \forall x \in X\) vale
+\[\lim_{n \to \infty } \left( {|f_{n}\left(x \right) - f\left(x\right) | } \right) =0 \]
+ovvero se in ogni punto \(x\) il limite della successione di funzioni è il valore della funzione \(f\) in \(x\).
+
+ \item si dice che \(f_{n}\) converge \textbf{uniformemente} a \(f\) su \(X \iff \)
+\[ \lim_{n \rightarrow \infty } \left( \sup_{x \in X}{|f_{n}\left(x \right) - f\left(x\right) | } \right) =0 \]
+ovvero se definitivamente per \(n\to\infty \) il grafico di \(f_{n}\) è compreso nell'intorno tubolare tra \(f - \epsilon\) \quad e \quad \(f+\epsilon\).
+
+ \item si dice che \(f_{n}\) converge a \(f\) \textbf{quasi ovunque} \(\iff \)
+\[\mu \left( \left\lbrace x \in X : \lim_{n \to \infty } \left( {\mid f_{n}\left(x \right) - f\left(x\right)\mid } \right) \neq 0 \right\rbrace \right) = 0 \]
+ovvero se l'insieme dei punti in cui non c'è convergenza puntuale ha misura nulla.
+
+ \item si dice che \(f_{n}\) converge a \(f\) \textbf{in \(L^{1}\)} \(\iff\)
+\[ \lim_{n \rightarrow \infty} \int_{X}{ |f_{n} - f | d\mu = 0} \]
+ovvero se all'aumentare di n l'area compresa tra \(f_{n}\) e \(f\) tende a 0. Questo consente di avere dei picchi che si distanziano dalla funzione limite, l'importante è solo che abbiano area piccola.
+
+ \item si dice che \(f_{n}\) converge a \(f\) \textbf{in misura} \(\iff \forall \epsilon > 0 \) vale
+\[ \lim_{n \rightarrow \infty}{ \mu \left( \left\lbrace x \in X : | f_{n} \left( x \right) - f \left( x \right) | \geq \epsilon \right\rbrace \right)} = 0 \]
+ovvero se la misura dell'insieme dei punti della funzione che non sono contenuti nell'intorno tubolare di \(f\) tende a 0.
+\end{itemize}
+
+
+\end{document}
