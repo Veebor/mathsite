@@ -12,14 +12,9 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    
-    
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    
-
     <link rel="stylesheet" href="css/style.css">
     
   </head>
@@ -103,6 +98,19 @@
        cursor: pointer;
      }
     #overlaydoc {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2;
+      cursor: pointer;
+    }
+    #overlayplot {
       position: fixed;
       display: none;
       width: 100%;
@@ -262,6 +270,15 @@
                   <h3>nomegrosso</h3>
                   <p>mini spiegazione </p>
                   <p><a href="javascript:on5()"  onclick="on5()" class="readmore">Definizione formale</a></p>
+                </div>
+
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                <div class="service h-100">
+                  <h3>Search Engine Optimization</h3>
+                  <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  <p><a href="javascript:location.href='/definizioni'" onclick="location.href('/definizioni')"   class="readmore"><i class="fa  fa-download"></i><span>Download</span></a></p></p
+
                 </div>
               </div>
             </div>
@@ -431,80 +448,50 @@
         </div>
         <div class="row mb-5">
           <div class="col-lg-6 mb-4 mb-lg-0">
-            <img src="images/sq_img_2.jpg" alt="Image" class="img-fluid">
+            <img src="https://www.geogebra.org/resource/NTKKwVWK/zDHCX862IrsyMPY2/material-NTKKwVWK.png" alt="Image" class="img-fluid">
+
           </div>
+          <div  id="overlayplot" class="container123" onclick="offplot()">
+            <div class="center123">
+              <iframe scrolling="no" title="provaFra_2" src="https://www.geogebra.org/material/iframe/id/xswyq8x4/width/1536/height/652/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"   width="1536px" height="652px"  style="border:0px;"> </iframe>
+
+            </div>
+          </div>
+          <script>
+
+            function onplot() {
+              document.getElementById("overlayplot").style.display = "block";
+            }
+
+            function offplot() {
+              document.getElementById("overlayplot").style.display = "none";
+            }
+          </script>
+
           <div class="col-lg-5 h-100 jm-sticky-top ml-auto">
             <h3>Project title one</h3>
             <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p class="mb-4"><a href="#" class="readmore">Visit website</a></p>
+
             <div class="testimonial bg-white h-100">
               <blockquote class="mb-3">
                 <p>&ldquo;Far far away, behind the word mountains, <strong>far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</strong> right at the coast of the Semantics, a large language ocean.&rdquo;</p>
               </blockquote>
               <div class="d-flex align-items-center vcard">
                 <figure class="mb-0 mr-3">
-                  <img src="images/person_3.jpg" alt="Image" class="img-fluid ounded-circle">
+                  <p><a href="javascript:onplot()"  onclick="onplot()" class="d-flex align-items-center"><i class="fa  fa-area-chart"></i><span>Sparati un grafichetto</span></a></p></p
                 </figure>
-                <div class="vcard-text">
-                  <span class="d-block">Jacob Spencer</span>
-                  <span class="position">Web Designer</span>
+              </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row mb-5">
-          <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-            <img src="images/sq_img_4.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-lg-5 h-100 jm-sticky-top mr-auto order-2 order-lg-1">
-            <h3>Project title two</h3>
-            <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p class="mb-4"><a href="#" class="readmore">Visit website</a></p>
-            <div class="testimonial bg-white h-100">
-              <blockquote class="mb-3">
-                <p>&ldquo;A small river named Duden <strong>flows by their place and supplies it with the necessary regelialia</strong>. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-              </blockquote>
-              <div class="d-flex align-items-center vcard">
-                <figure class="mb-0 mr-3">
-                  <img src="images/person_4.jpg" alt="Image" class="img-fluid ounded-circle">
-                </figure>
-                <div class="vcard-text">
-                  <span class="d-block">Jean Smith</span>
-                  <span class="position">Web Designer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-          <div class="row mb-5">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <img src="images/sq_img_6.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-lg-5 h-100 jm-sticky-top ml-auto">
-            <h3>Project title three</h3>
-            <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p class="mb-4"><a href="#" class="readmore">Visit website</a></p>
-            <div class="testimonial bg-white h-100">
-              <blockquote class="mb-3">
-                <p>&ldquo;Far far away, behind the word mountains, <strong>far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</strong> right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-              <div class="d-flex align-items-center vcard">
-                <figure class="mb-0 mr-3">
-                  <img src="images/person_3.jpg" alt="Image" class="img-fluid ounded-circle">
-                </figure>
-                <div class="vcard-text">
-                  <span class="d-block">Jacob Spencer</span>
-                  <span class="position">Web Designer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-      </div>
+
+
+
     </div>
 
     <div class="site-section bg-light">
@@ -522,13 +509,8 @@
                 <p>&ldquo;Far far away, behind the word mountains, <strong>far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</strong> right at the coast of the Semantics, a large language ocean.&rdquo;</p>
               </blockquote>
               <div class="d-flex align-items-center vcard">
-                <figure class="mb-0 mr-3">
-                  <img src="images/person_3.jpg" alt="Image" class="img-fluid ounded-circle">
-                </figure>
-                <div class="vcard-text">
-                  <span class="d-block">Jacob Spencer</span>
-                  <span class="position">Web Designer</span>
-                </div>
+
+
               </div>
             </div>
           </div>
@@ -538,13 +520,6 @@
                 <p>&ldquo;A small river named Duden <strong>flows by their place and supplies it with the necessary regelialia</strong>. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
               </blockquote>
               <div class="d-flex align-items-center vcard">
-                <figure class="mb-0 mr-3">
-                  <img src="images/person_4.jpg" alt="Image" class="img-fluid ounded-circle">
-                </figure>
-                <div class="vcard-text">
-                  <span class="d-block">Jean Smith</span>
-                  <span class="position">Web Designer</span>
-                </div>
               </div>
             </div>
           </div>
@@ -555,13 +530,6 @@
                 <p>&ldquo;A small river named Duden <strong>flows by their place and supplies it with the necessary regelialia</strong>. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
               </blockquote>
               <div class="d-flex align-items-center vcard">
-                <figure class="mb-0 mr-3">
-                  <img src="images/person_4.jpg" alt="Image" class="img-fluid ounded-circle">
-                </figure>
-                <div class="vcard-text">
-                  <span class="d-block">Jean Smith</span>
-                  <span class="position">Web Designer</span>
-                </div>
               </div>
             </div>
 
@@ -571,14 +539,8 @@
               <blockquote class="mb-3">
                 <p>&ldquo;Far far away, behind the word mountains, <strong>far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</strong> right at the coast of the Semantics, a large language ocean.&rdquo;</p>
               </blockquote>
+              <p><a href="javascript:location.href='/risorse'" onclick="location.href('/risorse')"   class="d-flex align-items-center"><i class="fa  fa-download"></i><span>Download</span></a></p></p
               <div class="d-flex align-items-center vcard">
-                <figure class="mb-0 mr-3">
-                  <img src="images/person_3.jpg" alt="Image" class="img-fluid ounded-circle">
-                </figure>
-                <div class="vcard-text">
-                  <span class="d-block">Jacob Spencer</span>
-                  <span class="position">Web Designer</span>
-                </div>
               </div>
             </div>
           </div>
@@ -616,7 +578,7 @@
 
           <div class="row mb-4">
             <div class="col-12">
-              <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+              <textarea class="form-control" name="" id="" cols="20" rows="5" placeholder="Message"></textarea>
             </div>
           </div>
 
@@ -631,82 +593,7 @@
     </div> <!-- END .site-section -->
 
     <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="row mb-5">
-              <div class="col-12">
-                <h3 class="footer-heading mb-4">About Us</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="col-lg-3 ml-auto">
-
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Navigation</h3>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="#home-section" class="smoothscroll">Home</a></li>
-                  <li><a href="#what-we-do-section" class="smoothscroll">What We Do</a></li>
-                  <li><a href="#about-section" class="smoothscroll">About Us</a></li>
-                  <li><a href="#team-section"  class="smoothscroll">Team</a></li>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="col-lg-4 mb-5 mb-lg-0">
-
-            <div class="mb-5">
-              <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-
-              <form method="post" class="form-subscribe">
-                <div class="form-group mb-3">
-                  <input type="text" class="form-control border-white text-white bg-transparent" placeholder="Enter full name" aria-label="Enter Email" aria-describedby="button-addon2">
-                </div>
-                <div class="form-group mb-3">
-                  <input type="text" class="form-control border-white text-white bg-transparent" placeholder="Enter email" aria-label="Enter Email" aria-describedby="button-addon2">
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-primary px-5" type="submit">Subscribe</button>
-                </div>
-              </form>
-
-            </div>
-
-
-
-
-          </div>
-
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="mb-4">
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                </div>
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-
-        </div>
-      </div>
+    
     </footer>
   </div>
 
