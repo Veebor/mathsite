@@ -1,4 +1,4 @@
-img1: https://latex.artofproblemsolving.com/9/f/e/9fe11cc837896d059fe3d29973350f11cc16864e.png
+
 img2: https://simomaths.files.wordpress.com/2012/11/uniformconvergence.png
 img3: https://i.stack.imgur.com/ak5fB.png
 img4: https://i.stack.imgur.com/Wl9lZ.jpg

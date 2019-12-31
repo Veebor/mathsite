@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\begin{document}
+
+
+\section*{Teoremi e Applicazioni convergenza}
+In questa sezione sono presenti gli enunciati di alcuni teoremi riguardanti la convergenza, studiati in parte nell'insegnamento di Analisi 3 e in parte in corsi precedenti. Per la dimostrazione e maggiori dettagli sono presenti le fonti su cui approfondire i vari argomenti.
+
+\subsection*{Analisi 3}
+I primi due risultati sono criteri per mostrare la convergenza uniforme di successioni e serie di funzioni.\\
+\url{http://www-dimat.unipv.it/pier/teaching/note-longhi-mauri.pdf}\\
+\url{http://poincare.unile.it/campiti/tracce/02-serie-di-funzioni.pdf}\\
+\url{http://calvino.polito.it/~lucipan/materiale_html/Analisi-2-PANDOLFI.pdf}
+
+\begin{itemize}
+\item \textbf{Criterio di Cauchy} \\
+Data la successione di funzioni \(f_{n}: I \subset \mathbb{R} \rightarrow \mathbb{R}\), si ha che \\
+\(f_{n} \) converge uniformemente a \(f\) su \(I \iff \forall \epsilon >0 \quad \exists N=N(\epsilon)\in \mathbb{N}\) tale che \quad \(\forall n \in \mathbb{N} \quad \forall p \in \mathbb{N} \)\quad vale \quad \( \mid f_{n+p}(x)-f_{n}(x) \mid < \epsilon \quad \forall x \in I\) \\
+\textbf{OSS:} Il vantaggio di questo criterio è che non è necessario conoscere a priori la funzione limite \(f\).\\
+\newline
+\url{https://it.wikipedia.org/wiki/Criterio_di_convergenza_di_Cauchy}\\
+"Analisi Matematica 2" - Pagani-Salsa, Paragrafo 2 Capitolo 3
+
+\item \textbf{Criterio di Weierstrass}\\
+Data la successione di funzioni \(f_{n}: I \subset \mathbb{R} \rightarrow \mathbb{R}\), se \( \exists\) una successione \(c_{n} \in \mathbb{R}^+\) tale che:
+\begin{itemize}
+\item \(| f_{n}(x)| \leq c_{n} \quad \forall x \in I \quad \forall n \geq 1\) \quad ( \(c_{n}\) maggiorazione uniforme)
+\item la serie \(\sum_{n=1}^{+\infty}c_{n}\) converge
+\end{itemize}
+Allora la serie \(\displaystyle{\sum_{n=1}^{+\infty}f_{n}(x)}\) converge uniformemente su \(I\) \\
+\url{https://it.wikipedia.org/wiki/Criterio_di_Weierstrass}\\
+"Analisi Matematica 2" - Pagani Salsa, Proposizione 2.1 Capitolo 3
+
+\end{itemize}
+I teoremi seguenti invece sfruttano la teoria della misura e dell'integrazione di Lebsgue per ottenere il passaggio al limite sotto il segno di integrale e trovare relazioni fra i modi di convergenza studiati.
+\begin{itemize}
+
+\item \textbf{Teorema di Convergenza Monotona (o di Beppo Levi)} \\
+Siano \( \left(X, \mathcal{M}, \mu\right) \) uno spazio di misura e \(f_{n}, f : X \rightarrow \left[0, +\infty \right]\) tali che:
+\begin{itemize}
+\item le \(f_{n}\) sono funzioni misurabili
+\item \(0 \leq f_{n} \leq f_{n+1} \qquad \forall n \geq 1\)
+\item \(\displaystyle{\lim_{n \to \infty} f_{n}\left( x \right) = f \left( x \right) \quad \forall x \in X }\)
+\end{itemize}
+Allora:
+\begin{itemize}
+\item \(f\) è misurabile
+\item \( \displaystyle{\lim _{n \to \infty} \int _{X} f_{n} d\mu = \int_{X}f d\mu}\)
+\end{itemize}
+\url{https://it.wikipedia.org/wiki/Teorema_della_convergenza_monotona}\\
+\url{http://web.math.unifi.it/users/magnanin/Istit/a3gsm11.pdf} - cap 4\\
+“Real and complex analysis” – Rudin, Teorema 1.26
+
+
+\item \textbf{Teorema di Convergenza Dominata}\\
+Siano \( \left(X, \mathcal{M}, \mu\right) \) uno spazio di misura e \(f_{n}, f : X \rightarrow \mathbb{C}\) tali che:
+\begin{itemize}
+\item le \(f_{n}\) sono funzioni misurabili
+\item \(\displaystyle{\lim _{{n\to \infty }}f_{n}(x)=f(x)\quad \forall x\in X}\)
+\item \(\exists g\in L^{1}(\mu)\) \quad t.c. \( |f_{n}(x)|\leq g(x) \quad \forall n \geq 1, \quad \forall x \in X\)
+\end{itemize}
+Allora:
+\begin{itemize}
+\item \(f \in L^1(\mu)\)
+\item \(\displaystyle {\lim _{n \to \infty }\int _{X}\mid f_{n}-f\mid d\mu =0} \)
+\item \( \displaystyle{\lim _{n \to \infty} \int _{X} f_{n} d\mu = \int_{X}f d\mu}\)
+\end{itemize}
+\url{ https://it.wikipedia.org/wiki/Teorema_della_convergenza_dominata}\\
+\url{http://www.dmi.unict.it/~villani/Complementi%20di%20Analisi%20matematica/CONVERGENZA%20DOMINATA.pdf}\\
+\url{http://web.math.unifi.it/users/magnanin/Istit/a3gsm11.pdf} - cap 4\\
+“Real and complex analysis” – Rudin, Teorema 1.34
+
+\newpage
+\item \textbf{Teorema}\\
+Siano \( \left(X, \mathcal{M}, \mu\right) \) uno spazio di misura e \(f_{n}, f : X \rightarrow \mathbb{R}\) tali che:
+\begin{itemize}
+\item \(f_{n}\) integrabile \( \forall n\)
+\item \( \exists f : X \rightarrow \mathbb{R}\) t.c. \(f_{n}\) converge a \(f\) uniformemente su \(X\)
+\item \(\mu(X) < +\infty\)
+\end{itemize}
+Allora:
+\begin{itemize}
+\item \(f\) è integrabile
+\item \(f_{n}\) converge a \(f\) in \(L^1(\mu)\)
+\end{itemize}
+"Real Analysis" - Folland, Paragrafo 2.4
+
+
+\item \textbf{Teorema inverso della convergenza dominata}\\
+Siano \( \left(X, \mathcal{M}, \mu\right) \) uno spazio di misura e \(f_{n}, f : X \rightarrow \mathbb{C}\) tali che:
+\begin{itemize}
+\item \(f_{n}\) converge a \(f\) in \(L^1(\mu)\)
+\end{itemize}
+Allora esiste una sottosuccessione \(f_{n_{k}}\) tale che:
+\begin{itemize}
+\item \(f_{n_{k}}\) converge a \(f\) quasi ovunque su \(X\)
+\item \(\exists g\in L^{1}(\mu)\) \quad t.c. \( |f_{n_{k}}(x)|\leq g(x) \quad \forall n_{k} \quad \forall x \in X\)
+\end{itemize}
+\textbf{OSS:} questo significa che a meno di sottosuccessioni la convergenza in \(L^1\) implica quella quasi ovunque.\\
+\newline
+"Real Analysis" - Folland, Paragrafo 2.4
+
+\end{itemize}
+\newpage
+
+\subsection*{Calcolo delle Probabilità e Statistica}
+Anche in probabilità e statistica è molto importante il concetto di convergenza di variabili aleatorie e si differenziano vari modi. Ecco riportati alcuni risultati fondamentali. Per questa parte oltre ai link specifici per i vari teoremi si può fare riferimento a:\\
+G. Grimmett, D. Stirzaker "Probability and Random Processes", Third Edition, Oxford Un. Press, 2001\\
+\url{http://www.tlc.unipr.it/bononi/didattica/TSA/beucher/EntwurfVorlesung.pdf} (p. 11-12)\\
+\url{http://oldwww.unibas.it/utenti/dinardo/sedicilezio.pdf}\\
+\url{http://boccignone.di.unimi.it/SAD_2017_files/lez10.pdf}
+
+\begin{itemize}
+\item \textbf{Leggi dei grandi numeri}\\
+Sia \( \left(X_{n}\right)_{n \in \mathbb{N}} \) una successione di variabili aleatorie indipendenti e identicamente distribuite con valore atteso \(\mu=\mathbb{E}[X_1]\), \quad sia \(\overline{X}_{n}=\frac{1}{n}\sum_{i=1}^n X_{i}\) la media empirica. Allora valgono:
+\begin{itemize}
+\item {Legge debole dei grandi numeri (o teorema di Bernoulli)}
+\[ \forall \eta >0 \qquad \lim_{n \to +\infty} \mathbb{P} \left( | \overline{X}_{n} - \mu \mid > \eta\right)=0 \]
+\item {Legge forte dei grandi numeri}
+\[ \mathbb{P} \left( \lim_{n \to +\infty} \overline{X}_{n}=\mu \right)=1\]
+\end{itemize}
+\url{https://it.wikipedia.org/wiki/Legge_dei_grandi_numeri}
+
+\item Data una variabile aleatoria \(X\) e una successione di  variabili aleatorie \( \left(X_{n}\right)_{n \in \mathbb{N}} \) a valori in \(\mathbb{R}\) con funzioni di distribuzione \(F_{X_{n}}\), abbiamo studiato 3 tipi di convergenza:
+\begin{itemize}
+
+\item si dice che \( \left(X_{n}\right)_{n} \) converge a \(X\) \textbf{in probabilità} (e si indica con \(X_{n} \stackrel{\mathbb{P}}{\to}X \)) se \quad \( \forall \eta >0  \qquad \lim_{n \to \infty} \mathbb{P}\left(\mid X_{n} - X \mid > \eta \right)=0\).
+
+\item si dice che \( \left(X_{n}\right)_{n} \) converge \textbf{in distribuzione} (o in legge) a \(X\) con funzione di distribuzione \(F_{X}\) (e si indica con \(X_{n} \stackrel{d}{\to} X \)) se \quad \( \lim_{n \to \infty} F_{X_{n}}(x)=F_{X}(x) \quad \forall\) punto di continuità di \(F_{X}\).
+
+\item si dice che \( \left(X_{n}\right)_{n} \) converge a \(X\) \textbf{quasi certamente} (e si indica con \(X_{n} \stackrel{q.c.}{\to}X \)) se \quad \(\mathbb{P}\left( \left\lbrace \omega \in \Omega : X_{n}(\omega) \to X(\omega) \right\rbrace \right) =1\).
+\end{itemize}
+\textbf{OSS:} anche qua come per le funzioni alcuni modi di convergenza sono più forti di altri. In particolare vale:\\
+convergenza \(q.c. \Rightarrow \) convergenza in \(\mathbb{P} \Rightarrow\) convergenza in \(d\).\\
+\url{https://it.wikipedia.org/wiki/Convergenza_di_variabili_casuali}\\
+\url{https://www.mat.unical.it/~gianfelice/didattica/P&PS/appti_P&PS.pdf} - capitolo 2
+
+\item \textbf{Teorema di Levy}\\
+Sia \( \left(X_{n}\right)_{n \in \mathbb{N}} \) una successione di variabili aleatorie con funzione caratteristica \( \varphi_{X_{n}}(\theta)\) tale che \(X_{n} \stackrel{d}{\to} X \), sia \(\varphi_{X}\) la funzione caratteristica di \(X\). Allora:
+\[ \varphi_{X_{n}}(\theta) \to \varphi_{X}(\theta) \quad \forall \theta \in \mathbb{R} \]
+\url{https://it.wikipedia.org/wiki/Teorema_di_continuit%C3%A0_di_L%C3%A9vy}
+
+\item \textbf{Teorema del limite centrale}\\
+Sia \( \left(X_{n}\right)_{n \in \mathbb{N}} \) una successione di variabili aleatorie a valori in \(\mathbb{R}\) indipendenti e identicamente distribuite con  \( \mathbb{E}[X_i]=\mu\) e \(\mbox{Var}X_i=\sigma^2 \quad \forall i\). Allora:
+\[ S_{n}={\frac {\frac{1}{n}\sum _{j=1}^{n} \left(X_{j}-\mu\right) }{\frac{\sigma} {\sqrt {n}}}} \stackrel{d}{\longrightarrow} Z \sim N(0,1) \]
+\url{https://it.wikipedia.org/wiki/Teoremi_centrali_del_limite}\\
+\url{http://users.dma.unipi.it/~flandoli/StatI_TLC.pdf}
+\end{itemize}
+
+
+\newpage
+\subsection*{Analisi Numerica}
+\begin{itemize}
+\item aiuto sono troppi faccio poi
+\end{itemize}
+
+\end{document}

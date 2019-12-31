@@ -1,0 +1,13 @@
+- Criterio Cauchy
+- Criterio di Weierstrass
+- Teorema di Convergenza Monotona (o di Beppo Levi)
+- Teorema di Convergenza Dominata
+- Teorema inverso della convergenza dominata
+
+
+- Leggi dei grandi numeri
+- Teorema di Levy
+- Teorema del limite centrale
+
+
+
