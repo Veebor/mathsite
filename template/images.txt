@@ -1,6 +1,0 @@
-
-img2: https://simomaths.files.wordpress.com/2012/11/uniformconvergence.png
-img3: https://i.stack.imgur.com/ak5fB.png
-img4: https://i.stack.imgur.com/Wl9lZ.jpg
-img5: https://mpng.pngfly.com/20180516/cbq/kisspng-geogebra-mathematics-geometry-graph-of-a-function-5afc1642e56154.7062335015264702109396.jpg
-
